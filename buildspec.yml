@@ -25,7 +25,7 @@ phases:
     commands:
       - echo Entering build phase...
       - echo Build started on `date`
-      - mvn clean packagec
+      - mvn clean package
       - cp target/SampleServlet.war SampleServlet.war
       - docker image build --tag $REPOSITORY_URI:$TAG .
 
