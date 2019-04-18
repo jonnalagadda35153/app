@@ -40,8 +40,8 @@ phases:
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
       - kubectl apply -f appdeploy.yml
-      - printf '[{"name":"sessionapp","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
+      - printf '[{"name":"app","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
   files:
-    - 'target/session-1.0-SNAPSHOT.war'
+    - 'target/SampleServlet.war'
     - '**/*'
