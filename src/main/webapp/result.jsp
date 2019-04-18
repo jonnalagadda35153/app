@@ -4,10 +4,10 @@
 <body>
 <center>
 <h1>
-    Available Brands
+    Available Books
 </h1>
 <%
-List result= (List) request.getAttribute("brands");
+List result= (List) request.getAttribute("books");
 Iterator it = result.iterator();
 out.println("<br>We have <br><br>");
 
