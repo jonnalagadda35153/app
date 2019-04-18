@@ -14,9 +14,14 @@ spec:
     app: app
   type: LoadBalancer
   ports:
-    -  protocol: TCP
-       port: 80
-       targetPort: 8080
+  - name: http
+    port: 80
+    targetPort: nodejs-port
+    protocol: TCP
+  - name: https
+    port: 443
+    targetPort: nodejs-port
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
