@@ -4,4 +4,4 @@ FROM tomcat:7.0
 MAINTAINER Jaswanth
 
 # COPY path-to-your-application-war path-to-webapps-in-docker-tomcat
-COPY target/SampleServlet.war /usr/local/tomcat/webapps/SampleServlet
+COPY SampleServlet.war /usr/local/tomcat/webapps/SampleServlet
