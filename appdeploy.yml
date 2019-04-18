@@ -21,7 +21,7 @@ kind: Deployment
 metadata:
   name: app
   labels:
-    app: session
+    app: app
   namespace: default
 spec:
   replicas: 2
